@@ -18,14 +18,9 @@ export const OtpInputWrapper = styled.div`
   column-gap: 16px;
 `;
 
-export const ProgressBar = styled.div`
-  width: ${(props) => (props.$width ? props.$width + "%" : "auto")};
-  background-color: green;
-  height: 100%;
-`;
-
-export const ProgressBarText = styled.span`
-  transform: translateX(50%) translateY(50%);
-  color: ${(props) => (props.$width && props.$width > 50 ? "#fff" : "#000")};
-  position: absolute;
+export const Button = styled.button`
+  background-color: black;
+  font-size: 32px;
+  color: white;
+  margin-top: 32px;
 `;

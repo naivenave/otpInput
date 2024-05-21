@@ -3,6 +3,7 @@ import "./App.css";
 
 import OtpInput from "./Comps/OtpInput";
 import { submitOtp } from "./apis/otpApis";
+import { Button } from "./Comps/Styles";
 
 function App() {
   const [otp, setOtp] = useState("");
@@ -27,7 +28,7 @@ function App() {
   const handleOtpChange = (value) => {
     setOtp(value);
   };
-  console.log(loading);
+
   return (
     <>
       <OtpInput
@@ -35,7 +36,7 @@ function App() {
         value={otp}
         handleInputChange={handleOtpChange}
       />
-      <button onClick={handleSubmit}>Submit</button>
+      <Button onClick={handleSubmit}>Submit</Button>
       {loading ? <p>Loading...</p> : msg && <p>{msg}</p>}
     </>
   );
